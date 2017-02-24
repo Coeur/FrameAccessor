@@ -1,7 +1,12 @@
 plugin 'slather'
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, "4.3"
+platform :ios, '8.0'
+use_frameworks!
 
-target "FrameAccessor" do
-  pod 'FrameAccessor', :path => '..'
+target 'FrameAccessor' do
+  pod 'FrameAccessorSwift', :path => '..'
+
+  target 'FrameAccessorTests' do
+      inherit! :search_paths
+  end
 end
